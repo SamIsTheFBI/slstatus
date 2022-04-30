@@ -64,10 +64,12 @@ static const char unknown_str[] = "n/a";
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
 static const struct arg args[] = {
-	/* function		format          argument */
+	/* function		format          argument */	
+        { run_command,		"%s |",  	"~/Scripts/notify-song"},
         { run_command,		"%s |",  	"nettraf"},
         { ram_perc,  		" RAM%3s%% |",  NULL},
         { cpu_perc, 		" CPU%3s%% |",  NULL},
         { run_command, 		" %s |",        "battery"},
-        { datetime, 		" %s ",         "%a %d %b %Y | %R" }
+        { datetime, 		" %s ",         "%a %d %b %Y | %R" },
+
 };
