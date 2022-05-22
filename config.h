@@ -70,6 +70,6 @@ static const struct arg args[] = {
         { run_command,  	"  %5s |",     "free -h | awk '/^Mem/ { print $3 }' | sed s/i//g"},
         { cpu_perc, 		"  %3s%% |",  NULL},
         { run_command, 		" %5s |",        "battery"},
-        { datetime, 		"  %s",         "%a %x |  \[%R\]"},
+        { datetime, 		" %s",         "%a %x |  %R"},
 
 };
