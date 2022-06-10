@@ -65,11 +65,10 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function		format          argument */	
-        { run_command,		"%s |",  	"statusbar-now-playing"},
-        { run_command,		"%s |",  	"nettraf"},
-        { run_command,  	"  %5s |",     "free -h | awk '/^Mem/ { print $3 }' | sed s/i//g"},
-        { cpu_perc, 		"  %3s%% |",  NULL},
-        { run_command, 		" %5s |",        "battery"},
-        { datetime, 		"  %s",         "%a %x |  %R"},
-
+        { run_command,		" %s ",  	"now-playing sbar"},
+        { run_command,		"^B2^^C0^ %s ^b#1d2225^^c#1d2225^ ",  	"nettraf"},
+        { run_command,  	"^B3^^C0^  %5s ",     "free -h | awk '/^Mem/ { print $3 }' | sed s/i//g"},
+        { cpu_perc, 		"  %3s%% ",  NULL},
+        { run_command, 		" %5s ^b#1d2225^^c#1d2225^ ",        "battery"},
+        { datetime, 		"^B4^^C0^  %s ",         "%a %x  %R"},
 };
